@@ -12,6 +12,7 @@
   --orange: #fe7d4e;
 
   --header-height: 78px;
+  --secondary-header-height: 150px;
 
   font-family: "Open Sans", sans-serif;
 }
@@ -26,7 +27,8 @@
 
 /* HEADER ################################################### */
 .header-elements {
-  margin: 0 20px;
+  background-color: var(--primary);
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   height: var(--header-height);
@@ -50,7 +52,7 @@
   transform: scale(3);
   top: 30px;
   right: 33px;
-  opacity: 0%;
+  opacity: 50%;
 }
 
 #toggle:hover {
@@ -68,7 +70,7 @@
   flex-direction: column;
   position: fixed;
   top: var(--header-height);
-  /* right: -400px; */
+  right: -100%;
   transition: right 0.5s;
 }
 
@@ -158,11 +160,12 @@
   /* NAVIGATION MENU ########################################## */
   .nav {
     width: 250px;
+    /* right: 0; */
   }
 
   .nav ul {
     list-style-type: disc;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     text-align: start;
     width: 100%;
   }
@@ -174,5 +177,98 @@
   /* HERO ##################################################### */
   .hero {
     /* height: calc(100vh - var(--header-height)); */
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* HEADER ################################################### */
+  .header-elements {
+    margin: 0;
+    /* padding: 40px 200px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    height: var(--secondary-header-height);
+  }
+
+  .logo {
+    /* padding: 40px 200px; */
+    padding: 40px 60px;
+  }
+
+  #toggle,
+  .menu-icon {
+    display: none;
+  }
+
+  /* NAVIGATION MENU ########################################## */
+  .nav * {
+    /* border: 1px solid goldenrod; */
+  }
+
+  .nav {
+    /* z-index: 2; */
+    /* background-color: var(--primary); */
+    /* height: calc(100vh - var(--header-height)); */
+    /* height: 300px; */
+    width: initial;
+    /* max-width: 100%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    position: absolute;
+    /* right: 0; */
+    /* Calculate position based on header height */
+    top: calc(var(--secondary-header-height) / 3);
+    right: 0px;
+    /* transition: right 0.5s; */
+    /* border: 1px solid red; */
+  }
+
+  .nav ul {
+    display: flex;
+    list-style-position: inside;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    align-self: unset;
+    text-align: start;
+    width: 100%;
+  }
+
+  .nav li {
+    padding: 0;
+    margin: 20px;
+    background-repeat: no-repeat;
+    /* background-position: 1em 1.1em; */
+    /* background-position: unset; */
+    width: initial;
+  }
+
+  /* Apply ot only last child */
+  .nav li:last-child {
+    margin-left: 30px;
+  }
+
+  /* Apply to all except for the last child */
+  .nav li:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .nav li:hover {
+    background-color: initial;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: var(--black-text);
+  }
+
+  .button {
+    color: var(--orange);
+    background-color: #ffe6dc;
+    padding: 20px 40px;
+    border: 1px solid #ffb89e;
+    border-radius: 40px;
   }
 }
