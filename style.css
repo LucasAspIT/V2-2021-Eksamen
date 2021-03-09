@@ -37,7 +37,7 @@
 }
 
 .logo span {
-  color: orange;
+  color: var(--orange);
 }
 
 .menu-icon {
@@ -55,6 +55,52 @@
 
 #toggle:hover {
   cursor: pointer;
+}
+
+/* NAVIGATION MENU ########################################## */
+.nav {
+  z-index: 2;
+  background-color: var(--primary);
+  /* height: calc(100vh - var(--header-height)); */
+  /* height: 300px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: var(--header-height);
+  /* right: -400px; */
+  transition: right 0.5s;
+}
+
+.nav ul {
+  list-style-position: inside;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+}
+
+.nav li {
+  padding: 18px 40px;
+  background-repeat: no-repeat;
+  background-position: 1em 1.1em;
+}
+
+/* Apply to all except for the last child */
+.nav li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.nav li:hover {
+  background-color: var(--orange);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--black-text);
 }
 
 /* HERO ##################################################### */
@@ -79,14 +125,6 @@
   position: relative;
 }
 
-.hero-box {
-  /* Legacy grid */
-  /* display: -ms-grid; */
-  /* display: grid; */
-  /* place-items: center; */
-  /* border: 1px solid red; */
-}
-
 /* Place text in the middle of the image */
 .hero-text {
   display: -ms-grid;
@@ -101,9 +139,40 @@
   color: var(--primary);
   line-height: 1.6rem;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
-  border: 1px solid goldenrod;
+  /* border: 1px solid goldenrod; */
 }
 
 .hero-text p {
   max-width: 90%;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* HEADER ################################################### */
+  .header-elements {
+    /* margin: 0 20px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* height: var(--header-height); */
+  }
+
+  /* NAVIGATION MENU ########################################## */
+  .nav {
+    width: 250px;
+  }
+
+  .nav ul {
+    list-style-type: disc;
+    align-self: flex-start;
+    text-align: start;
+    width: 100%;
+  }
+
+  .nav li:not(:last-child) {
+    border-bottom: none;
+  }
+
+  /* HERO ##################################################### */
+  .hero {
+    /* height: calc(100vh - var(--header-height)); */
+  }
 }
