@@ -25,6 +25,15 @@
   font-weight: bolder;
 }
 
+/* GENERAL STYLING ########################################## */
+h2 {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* HEADER ################################################### */
 .header-elements {
   background-color: var(--primary);
@@ -150,6 +159,58 @@
   max-width: 90%;
 }
 
+/* SECONDHAND ############################################### */
+.secondhand {
+  background-color: var(--primary);
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+}
+
+.secondhand-box {
+  /* border: 1px solid goldenrod; */
+  padding: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  max-width: 1460px;
+}
+
+.secondhand-header {
+  color: var(--brown-text);
+  /* border: 1px solid blue; */
+  margin: 0 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.secondhand-header a {
+  color: var(--brown-text);
+  display: flex;
+  align-items: center;
+}
+
+.secondhand-books {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.secondhand-books img {
+  flex: 0 1 auto;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* 
+MEDIA QUERY 1024px ###################################################################
+######################################################################################
+######################################################################################
+*/
+
 @media only screen and (min-width: 1024px) {
   /* HEADER ################################################### */
   .header-elements {
@@ -184,7 +245,17 @@
   .hero-text {
     font-size: 24px;
   }
+
+  .secondhand-box {
+    padding: 100px 0;
+  }
 }
+
+/* 
+MEDIA QUERY 1200px ###################################################################
+######################################################################################
+######################################################################################
+*/
 
 @media only screen and (min-width: 1200px) {
   /* HEADER ################################################### */
