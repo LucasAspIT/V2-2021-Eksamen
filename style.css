@@ -55,7 +55,7 @@ button:hover {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header-elements {
@@ -86,7 +86,7 @@ button:hover {
   transform: scale(3);
   top: 30px;
   right: 33px;
-  opacity: 50%;
+  opacity: 0;
 }
 
 #toggle:hover {
@@ -95,7 +95,7 @@ button:hover {
 
 /* NAVIGATION MENU ########################################## */
 .nav {
-  z-index: 2;
+  z-index: 1;
   background-color: var(--primary);
   width: 100%;
   display: flex;
@@ -103,6 +103,7 @@ button:hover {
   position: fixed;
   top: var(--header-height);
   right: -100%;
+  border-bottom: 2px solid var(--orange);
 }
 
 .nav ul {
@@ -371,6 +372,7 @@ MEDIA QUERY 1024px #############################################################
   /* NAVIGATION MENU ########################################## */
   .nav {
     width: 250px;
+    border-left: 2px solid var(--orange);
   }
 
   .nav ul {
@@ -438,6 +440,8 @@ MEDIA QUERY 1200px #############################################################
     top: calc(var(--secondary-header-height) / 3);
     right: 0;
     transition: right 0.5s;
+
+    border: 0;
   }
 
   .nav ul {
@@ -505,7 +509,7 @@ MEDIA QUERY 1200px #############################################################
 
   /* BOOK-CLUB ################################################ */
   .book-club-box {
-    height: 500px;
+    height: 550px;
   }
 
   .book-club-image {
