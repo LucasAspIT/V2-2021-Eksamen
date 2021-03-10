@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* HEADER ################################################### */
 .header-elements {
   background-color: var(--primary);
@@ -205,6 +209,68 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* MONTHLY-BOOK ############################################# */
+.monthly-book {
+  color: var(--brown-text);
+  /* border: 1px solid green; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+
+.monthly-book-wrapper {
+  background-color: var(--harry);
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.monthly-book-box {
+  /* border: 1px solid goldenrod; */
+  background-color: var(--light);
+  padding: 0 50px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  max-width: 370px;
+  font-size: 1.2rem;
+}
+
+.harry-box {
+  background-color: var(--harry);
+  padding: 20px 40px;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.harry-text {
+  margin: 0 20px;
+}
+
+.harry-box img {
+  margin: 20px 0;
+}
+
+.author {
+  display: flex;
+}
+
+.author div {
+  margin: 0 30px;
+}
+
+.harry-text button {
+  color: var(--primary);
+  font-size: 20px;
+  background-color: var(--orange);
+  padding: 20px 40px;
+  border: 1px solid #ff5b1f;
+  border-radius: 40px;
+}
+
 /* 
 MEDIA QUERY 1024px ###################################################################
 ######################################################################################
@@ -249,8 +315,12 @@ MEDIA QUERY 1024px #############################################################
   .secondhand-box {
     padding: 100px 0;
   }
-}
 
+  /* MONTHLY-BOOK ############################################# */
+  .harry-box {
+    margin-left: 40px;
+  }
+}
 /* 
 MEDIA QUERY 1200px ###################################################################
 ######################################################################################
@@ -358,5 +428,10 @@ MEDIA QUERY 1200px #############################################################
     font-size: 26px;
     line-height: 2.2rem;
     max-width: 1000px;
+  }
+
+  /* MONTHLY-BOOK ############################################# */
+  .harry-text button {
+    margin-top: 200px;
   }
 }
